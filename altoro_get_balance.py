@@ -41,4 +41,4 @@ if(altoro.file_exists("","balances.txt")):
 balanceFile = open("balances.txt", "w")
 balanceFile.write(output)
 balanceFile.close()
-print("Done")
+print("Done") 

@@ -11,6 +11,6 @@ encryptor = cipher.encryptor()
 ct = encryptor.update(b"a secret message") + encryptor.finalize()
 print("Encrypted Data: " + base64.b64encode(ct).decode("ascii"))
 decryptor = cipher.decryptor()
-decryptor.update(ct) + decryptor.finalize()
+decryptor.update(ct) + decryptor.finalize() 
 
 
