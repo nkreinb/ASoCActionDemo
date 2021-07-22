@@ -5,7 +5,7 @@ import subprocess
 base_url = "http://demo.testfire.net/api"
 auth_token = ""
 
-def login(username, password):
+def login(username, password): 
     global auth_token
     data = {
         "username": username,
@@ -17,7 +17,7 @@ def login(username, password):
         return True
     return False
 
-def logout():
+def logout(): 
     global auth_token
     headers = {
         "Authorization": auth_token
@@ -28,7 +28,7 @@ def logout():
         return True
     return False
 
-def check_login():
+def check_login(): 
     global auth_token
     headers = {
         "Authorization": auth_token
@@ -38,7 +38,7 @@ def check_login():
         return True
     return False
 
-def get_accounts():
+def get_accounts(): 
     global auth_token
     headers = {
         "Authorization": auth_token
@@ -48,7 +48,7 @@ def get_accounts():
         return r.json()
     return {}
 
-def get_account(account_no): 
+def get_account(account_no):  
     global auth_token
     headers = {
         "Authorization": auth_token
@@ -58,7 +58,7 @@ def get_account(account_no):
         return r.json()
     return {}
 
-def get_transactions(account_no):
+def get_transactions(account_no): 
     global auth_token
     headers = {
         "Authorization": auth_token
@@ -68,7 +68,7 @@ def get_transactions(account_no):
         return r.json()
     return {}
 
-def transfer(from_account, to_account, amount):
+def transfer(from_account, to_account, amount): 
     global auth_token
     headers = {
         "Authorization": auth_token
@@ -84,13 +84,13 @@ def transfer(from_account, to_account, amount):
     print("Code: " +str(r.status_code))
     return False
 
-def readCredsFromConfig(config_file):
+def readCredsFromConfig(config_file): 
     config = open(config_file)
     user = config.readline().strip()
     passwd = config.readline().strip()
     return (user,passwd)
 
-def file_exists(dir_path, file_name):
+def file_exists(dir_path, file_name): 
     p = subprocess.Popen(["dir", dir_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     (output, err) = p.communicate()
     p_status = p.wait()
