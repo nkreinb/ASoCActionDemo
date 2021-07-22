@@ -1,12 +1,12 @@
 import altoro_api as altoro
 import sys
-#import pickle
+import pickle
 import hashlib
 import os
 
 user = "jsmith"
 password = "demo1234"
-#(user,password) = altoro.readCredsFromConfig("config.txt")
+(user,password) = altoro.readCredsFromConfig("config.txt")
 
 print("Logging in...", end="") 
 if(altoro.login(user, password)==False):
