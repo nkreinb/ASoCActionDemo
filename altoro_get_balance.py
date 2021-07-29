@@ -1,10 +1,6 @@
 import altoro_api as altoro
 import sys
-<<<<<<< Updated upstream
-import pickle  
-=======
-import pickle 
->>>>>>> Stashed changes
+import pickle
 import hashlib
 import os
 
