@@ -9,7 +9,8 @@
 name: HCL AppScan CodeSweep Github Action
 
 
-on: [pull_request]
+#on: [pull_request]
+on: [push]
 
 jobs:
   scan:
