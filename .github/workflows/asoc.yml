@@ -15,9 +15,7 @@ name: HCL ASoC SAST Workflow
 on:
   # TODO: Uncomment/comment triggers based on your needs
   # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-#     branches: [ main ]
-#   pull_request:
+  pull_request:
 #     branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -59,7 +57,7 @@ jobs:
           ASOC_SECRET: ${{ secrets.ASOC_SECRET }}
           TestVar: abcd
           ASOC_SCAN_NAME: Automated Scan from Github Actions
-          # TODO: Update ASOC_APPID to reflect the ASoC acpplication this scan is to be associated with
+          # TODO: Update ASOC_APPID to reflect the ASoC application this scan is to be associated with
           ASOC_APPID: efab4009-12fc-4698-8047-612718cd6a63
 
         run: |
