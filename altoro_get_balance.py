@@ -21,7 +21,7 @@ print("Authorization Token Hash:" + str(hash.hexdigest()))
 
 output = ""
 print("Getting Account Balances")
-accounts = altoro.get_accounts()
+accounts = altoro.get_accounts() 
 
 print("Account Name\t\tAccount Number\t\tBalance")
 for account in accounts['Accounts']:
